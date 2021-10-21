@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewHeader"
+            android:text="@string/registration"/>
+        <EditText
+            android:id="@+id/registration_et_login"
+            style="@style/EditTextPrimary"
+            android:inputType="textEmailAddress"
+            android:hint="@string/username"/>
+        <EditText
+            android:id="@+id/registration_et_first_name"
+            style="@style/EditTextPrimary"
+            android:inputType="textCapWords"
+            android:hint="@string/name"/>
+        <EditText
+            android:id="@+id/registration_et_last_name"
+            style="@style/EditTextPrimary"
+            android:inputType="textCapWords"
+            android:hint="@string/last_name"/>
+        <EditText
+            android:id="@+id/registration_et_email"
+            style="@style/EditTextPrimary"
+            android:inputType="textEmailAddress"
+            android:hint="@string/e_mail"/>
+        <EditText
+            android:id="@+id/registration_et_password"
+            style="@style/EditTextPrimary"
+            android:inputType="textPassword"
+            android:hint="@string/password"/>
+        <EditText
+            android:id="@+id/registration_et_repeat_password"
+            style="@style/EditTextPrimary"
+            android:inputType="textPassword"
+            android:hint="@string/repeat_password"/>
+        <Button
+            android:id="@+id/registration_btn_sing_up"
+            style="@style/ButtonPrimary"
+            android:text="@string/register"/>
+        <Button
+            android:id="@+id/registration_btn_sing_in"
+            style="@style/ButtonPrimary"
+            android:text="@string/to_come_in"/>
+    </LinearLayout>
+
+</FrameLayout>
