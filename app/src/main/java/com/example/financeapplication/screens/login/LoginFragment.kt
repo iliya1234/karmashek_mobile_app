@@ -65,7 +65,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
                 if(response != null) {
                     Toast.makeText(context,response.token,Toast.LENGTH_SHORT).show()
                 }
-                findNavController().navigate(R.id.action_loginFragment_to_mainFragment);
+                findNavController().navigate(R.id.action_loginFragment_to_purchaseFragment);
             })
         }
     }

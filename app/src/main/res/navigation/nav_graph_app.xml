@@ -3,96 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph_app"
     app:startDestination="@id/loginFragment">
-
     <fragment
-        android:id="@+id/categoryFragment"
-        android:name="com.example.financeapplication.screens.category.CategoryFragment"
-        android:label="CategoryFragment" >
-        <action
-            android:id="@+id/action_categoryFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.financeapplication.screens.purchase.PurchaseFragment"
+        android:label="PurchaseFragment" />
     <fragment
-        android:id="@+id/detailsGoalFragment"
-        android:name="com.example.financeapplication.screens.detailsGoal.DetailsGoalFragment"
-        android:label="DetailsGoalFragment" >
-        <action
-            android:id="@+id/action_detailsGoalFragment_to_goalsFragment"
-            app:destination="@id/goalsFragment" />
-    </fragment>
+        android:id="@+id/incomeFragment"
+        android:name="com.example.financeapplication.screens.income.IncomeFragment"
+        android:label="IncomeFragment" />
     <fragment
-        android:id="@+id/detailsOperationFragment"
-        android:name="com.example.financeapplication.screens.detailsOperation.DetailsOperationFragment"
-        android:label="DetailsOperationFragment" >
-        <action
-            android:id="@+id/action_detailsOperationFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
+        android:id="@+id/goalFragment"
+        android:name="com.example.financeapplication.screens.goal.GoalFragment"
+        android:label="GoalsFragment" />
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.financeapplication.screens.main.MainFragment"
-        android:label="MainFragment" >
-        <action
-            android:id="@+id/action_mainFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_detailsOperationFragment"
-            app:destination="@id/detailsOperationFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_goalsFragment"
-            app:destination="@id/goalsFragment" />
-    </fragment>
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.financeapplication.screens.statistics.StatisticsFragment"
+        android:label="StatisticsFragment" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.financeapplication.screens.login.LoginFragment"
         android:label="LoginFragment" >
         <action
+            android:id="@+id/action_loginFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph_app" />
+        <action
             android:id="@+id/action_loginFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.financeapplication.screens.settings.SettingsFragment"
-        android:label="SettingsFragment" >
-        <action
-            android:id="@+id/action_settingsFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-        <action
-            android:id="@+id/action_settingsFragment_to_goalsFragment"
-            app:destination="@id/goalsFragment" />
-        <action
-            android:id="@+id/action_settingsFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.example.financeapplication.screens.registration.RegistrationFragment"
         android:label="RegistrationFragment" >
         <action
+            android:id="@+id/action_registrationFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph_app" />
+        <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_registrationFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/goalsFragment"
-        android:name="com.example.financeapplication.screens.goals.GoalsFragment"
-        android:label="GoalsFragment" >
-        <action
-            android:id="@+id/action_goalsFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-        <action
-            android:id="@+id/action_goalsFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-        <action
-            android:id="@+id/action_goalsFragment_to_detailsGoalFragment"
-            app:destination="@id/detailsGoalFragment" />
     </fragment>
 </navigation>

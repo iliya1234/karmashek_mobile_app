@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
 
     </style>
-    
+
     <style name="ButtonPrimary">
         <item name="android:textColor">@color/white</item>
         <item name="backgroundTint">@color/green_primary</item>
@@ -50,5 +50,12 @@
         <item name="android:textSize">@dimen/standard_header_tv</item>
         <item name="android:layout_margin">@dimen/standard_dimen</item>
         <item name="android:textColor">@color/swampy</item>
+    </style>
+
+    <style name="BottomNavigationView">
+        <item name="android:background">@color/green_primary</item>
+        <item name="itemRippleColor">@color/white</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemIconTint">@color/icons_color</item>
     </style>
 </resources>

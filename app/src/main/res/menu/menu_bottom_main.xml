@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation2"
-        android:title="@string/title_purchases" />
+        android:id="@+id/purchaseFragment"
+        android:icon="@drawable/outline_shopping_cart_24"
+        android:title="@string/menu_title_purchases" />
 
     <item
-        android:id="@+id/likesFragment"
-        android:title="@string/title_incomes" />
+        android:id="@+id/incomeFragment"
+        android:icon="@drawable/outline_local_atm_24"
+        android:title="@string/menu_title_incomes" />
 
     <item
-        android:id="@+id/settingsFragmen"
-        android:title="@string/title_goals" />
+        android:id="@+id/goalFragment"
+        android:icon="@drawable/outline_check_box_24"
+        android:title="@string/menu_title_goals" />
+
     <item
-        android:id="@+id/settingsFragment"
-        android:title="@string/title_settings" />
+        android:id="@+id/statisticsFragment"
+        android:icon="@drawable/outline_assessment_24"
+        android:title="@string/menu_title_statistics" />
 </menu>

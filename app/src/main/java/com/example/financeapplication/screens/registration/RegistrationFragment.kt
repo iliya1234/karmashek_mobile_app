@@ -86,7 +86,7 @@ class RegistrationFragment: Fragment(R.layout.fragment_registration) {
                         if(response != null) {
                             Constants.TOKEN = response.token
                             Toast.makeText(context,Constants.TOKEN,Toast.LENGTH_SHORT).show()
-                            findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
+                            findNavController().navigate(R.id.action_registrationFragment_to_purchaseFragment)
                         }
                     })
                 }
@@ -96,7 +96,7 @@ class RegistrationFragment: Fragment(R.layout.fragment_registration) {
 
     private fun singIn(){
         binding.registrationBtnSingIn.setOnClickListener {
-            findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
+//            findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
         }
     }
     private fun errorServerMessage(){
