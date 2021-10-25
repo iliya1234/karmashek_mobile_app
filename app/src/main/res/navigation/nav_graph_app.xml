@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.financeapplication.screens.login.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="LoginFragment">
         <action
             android:id="@+id/action_loginFragment_to_purchaseFragment"
             app:destination="@id/purchaseFragment"
@@ -35,7 +35,7 @@
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.example.financeapplication.screens.registration.RegistrationFragment"
-        android:label="RegistrationFragment" >
+        android:label="RegistrationFragment">
         <action
             android:id="@+id/action_registrationFragment_to_purchaseFragment"
             app:destination="@id/purchaseFragment"

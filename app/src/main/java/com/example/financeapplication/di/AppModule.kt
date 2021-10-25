@@ -2,7 +2,6 @@ package com.example.financeapplication.di
 
 import com.example.financeapplication.api.AuthService
 import com.example.financeapplication.utils.Constants
-import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,8 +40,6 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(AuthService::class.java)
-
-
 
 
 }

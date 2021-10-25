@@ -9,16 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.financeapplication.R
-import com.example.financeapplication.databinding.FragmentLoginBinding
 import com.example.financeapplication.databinding.FragmentRegistrationBinding
 import com.example.financeapplication.models.UserRegistration
-import com.example.financeapplication.screens.login.LoginViewModel
 import com.example.financeapplication.utils.Constants
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class RegistrationFragment: Fragment(R.layout.fragment_registration) {
+class RegistrationFragment : Fragment(R.layout.fragment_registration) {
 
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
@@ -48,30 +46,31 @@ class RegistrationFragment: Fragment(R.layout.fragment_registration) {
         _binding = null
     }
 
-    private fun singUp(){
+    private fun singUp() {
         binding.registrationBtnSingUp.setOnClickListener {
-            when{
+            when {
                 binding.registrationEtLogin.text.isEmpty() -> {
-                    Toast.makeText(context,R.string.empty_login,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.empty_login, Toast.LENGTH_SHORT).show()
                 }
                 binding.registrationEtFirstName.text.isEmpty() -> {
-                    Toast.makeText(context,R.string.empty_fist_name,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.empty_fist_name, Toast.LENGTH_SHORT).show()
                 }
                 binding.registrationEtLastName.text.isEmpty() -> {
-                    Toast.makeText(context,R.string.empty_last_name,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.empty_last_name, Toast.LENGTH_SHORT).show()
                 }
                 binding.registrationEtEmail.text.isEmpty() -> {
-                    Toast.makeText(context,R.string.empty_email,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.empty_email, Toast.LENGTH_SHORT).show()
                 }
                 binding.registrationEtPassword.text.isEmpty() -> {
-                    Toast.makeText(context,R.string.empty_password,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.empty_password, Toast.LENGTH_SHORT).show()
                 }
                 binding.registrationEtRepeatPassword.text.isEmpty() -> {
-                    Toast.makeText(context,R.string.empty_repeat_password,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.empty_repeat_password, Toast.LENGTH_SHORT)
+                        .show()
                 }
                 binding.registrationEtPassword.text.toString()
-                        != binding.registrationEtRepeatPassword.text.toString() ->{
-                    Toast.makeText(context,R.string.password_mismatch,Toast.LENGTH_SHORT).show()
+                        != binding.registrationEtRepeatPassword.text.toString() -> {
+                    Toast.makeText(context, R.string.password_mismatch, Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     val user = UserRegistration(
@@ -82,27 +81,28 @@ class RegistrationFragment: Fragment(R.layout.fragment_registration) {
                         binding.registrationEtRepeatPassword.text.toString()
                     )
                     viewModel.registerUser(user)
-                    viewModel.userResponse.observe(this,{ response ->
-                        if(response != null) {
-                            Constants.TOKEN = response.token
-                            Toast.makeText(context,Constants.TOKEN,Toast.LENGTH_SHORT).show()
-                            findNavController().navigate(R.id.action_registrationFragment_to_purchaseFragment)
-                        }
-                    })
                 }
             }
         }
+        viewModel.userResponse.observe(this, { response ->
+            if (response != null) {
+                Constants.TOKEN = response.token
+                Toast.makeText(context, Constants.TOKEN, Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_registrationFragment_to_purchaseFragment)
+            }
+        })
     }
 
-    private fun singIn(){
+    private fun singIn() {
         binding.registrationBtnSingIn.setOnClickListener {
 //            findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
         }
     }
-    private fun errorServerMessage(){
-        viewModel.errorMessage.observe(this,{ response->
-            if(response != null) {
-                Toast.makeText(context,response.message,Toast.LENGTH_SHORT).show()
+
+    private fun errorServerMessage() {
+        viewModel.errorMessage.observe(this, { response ->
+            if (response != null) {
+                Toast.makeText(context, response.message, Toast.LENGTH_SHORT).show()
             }
         })
     }

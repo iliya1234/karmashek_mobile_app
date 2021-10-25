@@ -8,7 +8,8 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/containerView"
-        android:name="androidx.navigation.fragment.NavHostFragment"        android:layout_width="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/beige_primary"
         app:defaultNavHost="true"

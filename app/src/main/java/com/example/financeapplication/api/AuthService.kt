@@ -1,7 +1,6 @@
 package com.example.financeapplication.api
 
 import com.example.financeapplication.models.*
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Headers
